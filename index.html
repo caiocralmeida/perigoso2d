@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perigoso 2D</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="hud" aria-label="Status">
+      <div class="lang-selector">
+        <button class="lang-btn" data-lang="pt" title="Português">PT</button>
+        <button class="lang-btn" data-lang="eng" title="English">EN</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="scene" aria-label="Loja Perigoso"></canvas>
+      <div id="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <section id="dialog" class="dialog hidden" aria-live="polite"></section>
+
+    <footer class="controls">
+      <button id="btn-dia" class="btn big">PASSAR DIA</button>
+    </footer>
+  </div>
+
+  <div id="stock" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Exposição"></div>
+  <div id="night" class="overlay night hidden" role="dialog" aria-modal="true" aria-label="Noite"></div>
+  <div id="start" class="overlay" role="dialog" aria-modal="true" aria-labelledby="start-title">
+    <div class="panel start-panel">
+      <h1 id="start-title" class="title">PERIGOSO</h1>
+      <p class="dim">Venda item por item. Sobreviva à noite.</p>
+      <p id="start-status" class="dim" role="status">Carregando interface…</p>
+      <noscript><p class="dim">Ative o JavaScript para jogar.</p></noscript>
+    </div>
+  </div>
+  <div id="fade" aria-hidden="true"></div>
+
+  <script nomodule>
+    document.getElementById('start-status').textContent =
+      'Este navegador não oferece suporte aos módulos JavaScript necessários para jogar.';
+  </script>
+  <script type="module" src="js/bootstrap.js"></script>
+</body>
+</html>

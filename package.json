@@ -1,0 +1,11 @@
+{
+  "name": "perigoso-2d",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Perigoso - jogo 2D de loja, exposição e negociação em Canvas 2D",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test tests/*.test.js"
+  }
+}
